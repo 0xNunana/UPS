@@ -1,0 +1,35 @@
+type Items {
+  item_id: Int
+  name: String
+  price: Float
+  quantity: Int
+}
+
+type Tracking {
+  customer_id: String
+  items: [Items]
+  customer:Customer
+  @materializer(
+    query:"getCustomerById"
+    arguments:[{name:"id",field:"customer_id"}]
+  )
+}
+
+type TrackList {
+  name:ID
+value:Tracking
+}
+# add the (id:ID!) arguments to enable it become dynamic..pass the id into the url $id
+type Query {
+  getTrackingItemsById(id:ID!): Tracking
+    @rest(
+      endpoint: "https://ups-clone-93d2e-default-rtdb.europe-west1.firebasedatabase.app/trackingItems/$id.json"
+    )
+
+ getTrackingItems:[TrackList]
+    @rest(
+      endpoint: "https://ups-clone-93d2e-default-rtdb.europe-west1.firebasedatabase.app/trackingItems.json"
+      transforms:[{pathpattern:[],editor:"objectToArray"}]
+    )
+
+}
