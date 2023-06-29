@@ -24,7 +24,7 @@ This mobile application is built with React Native and TypeScript. It uses libra
 
 First, clone the repository:
 
-git clone https://github.com/0xNunana/UPS.git
+git clone https://github.com/0xNunana/Xing.git
 
 Then, install the dependencies:
 cd yourrepository
