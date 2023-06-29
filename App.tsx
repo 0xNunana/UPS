@@ -1,10 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import CustomerScreen from './src/screens/CustomerScreen';
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
+
 import { NavigationContainer} from '@react-navigation/native'
 import RootNavigator from './src/navigator/RootNavigator';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider,  } from '@apollo/client';
+import { AuthProvider } from './Auth';
 
 const client = new ApolloClient({
   uri: 'https://ogbomoso.stepzen.net/api/bold-shark/__graphql',
@@ -17,11 +15,14 @@ const client = new ApolloClient({
 export default function App() {
 
   return (
-   <ApolloProvider client={client}>
+    <AuthProvider>
+ <ApolloProvider client={client}>
     <NavigationContainer>
 <RootNavigator/>
       </NavigationContainer>
    </ApolloProvider>
+  
+    </AuthProvider>
   
       
   

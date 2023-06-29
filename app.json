@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "UPS",
-    "slug": "UPS",
+    "name": "Xing",
+    "slug": "Xing",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/courier.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/courier.png",
         "backgroundColor": "#ffffff"
       }
     },

@@ -16,15 +16,15 @@ BottomTabNavigationProp<TabStack,"Customers">
 >
 
 const CustomerScreen = () => {
-    const navigation = useNavigation<NavProp>()
+
     const [input ,setInput]=useState('')
     const {loading,error,data}=useQuery(GET_CUSTOMERS)
-    console.log('data',data ,'error',error)
+  
   return (
     <ScrollView className='bg-[#67bdc7]'>
       <Image source={{uri:"https://links.papareact.com/3jc"}}  className='h-64 w-full' />
 <TextInput placeholder='Search by Customer'
-className='bg-white pt-5 pb-0 px-10'
+className='bg-white pt-5 pb-3 px-10 mx-2'
 onChangeText={setInput} value={input}/>
 
 

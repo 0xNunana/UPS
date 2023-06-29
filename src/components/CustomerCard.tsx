@@ -21,7 +21,7 @@ const navigation = useNavigation<NavProp>()
     <View className='rounded-lg p-5 bg-white my-2 mx-2'>
         <View>
             <View className='flex-row justify-between'>
-            <View>
+            <View className='py-1 space-y-2'>
                 <Text className='text-2xl font-bold'>{name}</Text>
                 <Text className='text-sm'>ID:{userId}</Text>
             </View>
@@ -38,8 +38,8 @@ const navigation = useNavigation<NavProp>()
 
         </View>
 
-        <View className='h-[0.7px] bg-black'/>
-        <Text>{email}</Text>
+        <View className='h-[0.7px] bg-black mt-2'/>
+        <Text className='text-gray-500'>{email}</Text>
     </View>
   </TouchableOpacity>
   )
