@@ -21,10 +21,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/courier.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.xing.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6757c0a0-d97a-42f2-ba38-c2a39316dba8"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/6757c0a0-d97a-42f2-ba38-c2a39316dba8"
     }
   }
 }
